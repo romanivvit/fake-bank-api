@@ -1,0 +1,5 @@
+com/umer/simplefakebank/dto/request/RequestAccountDTOTest.class
+com/umer/simplefakebank/dto/request/RequestOperationDTOTest.class
+com/umer/simplefakebank/SimpleFakeBankApplicationTests.class
+com/umer/simplefakebank/service/AccountServiceTest.class
+com/umer/simplefakebank/service/OperationServiceTest.class
