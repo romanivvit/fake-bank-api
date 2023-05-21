@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.umer.simplefakebank.dto.request.RequestOperationDTOTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.036 s <<< FAILURE! - in com.umer.simplefakebank.dto.request.RequestOperationDTOTest
-checkViolations_WhenReceiverAccountIsInvalid{Long}[1]  Time elapsed: 0.019 s  <<< FAILURE!
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.075 s <<< FAILURE! - in com.umer.simplefakebank.dto.request.RequestOperationDTOTest
+checkViolations_WhenReceiverAccountIsInvalid{Long}[1]  Time elapsed: 0.044 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 
 Expecting:
- <"не должно равняться null">
+ <"не може бути відсутнім, має бути задано">
 to be equal to:
  <"must not be null">
 but was not.
@@ -14,11 +14,11 @@ but was not.
 	at com.umer.simplefakebank.dto.request.RequestOperationDTOTest.violationEqualsNullNotAllowed(RequestOperationDTOTest.java:123)
 	at com.umer.simplefakebank.dto.request.RequestOperationDTOTest.checkViolations_WhenReceiverAccountIsInvalid(RequestOperationDTOTest.java:74)
 
-checkViolations_WhenSenderAccountIsInvalid{Long}[1]  Time elapsed: 0 s  <<< FAILURE!
+checkViolations_WhenSenderAccountIsInvalid{Long}[1]  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 
 Expecting:
- <"не должно равняться null">
+ <"не може бути відсутнім, має бути задано">
 to be equal to:
  <"must not be null">
 but was not.

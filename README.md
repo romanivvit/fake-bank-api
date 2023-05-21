@@ -1,32 +1,52 @@
 # simple-fake-bank
 
-## Table of content
-- [Introduction](#introduction)
-- [Technologies Used](#technologies-used)
-- [Swagger](#swagger)
-- [Commands](#commands)
-- [API Documentation](#api-documentation)
-- [Github Actions](#github-actions)
-- [Contribution](#contribution)
-- [Contact Information](#contact-information)
+[//]: # (## Table of content)
 
-## Introduction
+[//]: # (- [Introduction]&#40;#introduction&#41;)
 
-This project contains an application which can be used to:
-- Create a new bank account with an initial deposit for a customer.
-  - A single customer may have multiple accounts.
-- Transfer amounts between two accounts, including those owned by different customers.
-- Retrieve balance for a given account.
-- Retrieve transaction history for a given account.
+[//]: # (- [Technologies Used]&#40;#technologies-used&#41;)
 
-## Technologies Used
+[//]: # (- [Swagger]&#40;#swagger&#41;)
 
-- Java 11
-- [SpringBoot](https://start.spring.io/): Used to create easy stand-alone, production-grade Spring based Applications.
-- [H2 database engine](https://www.h2database.com/html/main.html): Embedded relational database
-- [Maven](https://maven.apache.org/): Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
-- [Swagger](https://swagger.io/): Swagger is an Interface Description Language for describing RESTful APIs expressed using JSON. Swagger is used together with a set of open-source software tools to design, build, document, and use RESTful web services. Swagger includes automated documentation, code generation, and test-case generation.
-- [Git Actions](https://docs.github.com/en/actions): GitHub Actions helps automate tasks within the software development life cycle. GitHub Actions are event-driven, meaning that you can run a series of commands after a specified event has occurred. They happen directly on the Github repo itself.
+[//]: # (- [Commands]&#40;#commands&#41;)
+
+[//]: # (- [API Documentation]&#40;#api-documentation&#41;)
+
+[//]: # (- [Github Actions]&#40;#github-actions&#41;)
+
+[//]: # (- [Contribution]&#40;#contribution&#41;)
+
+[//]: # (- [Contact Information]&#40;#contact-information&#41;)
+
+[//]: # ()
+[//]: # (## Introduction)
+
+[//]: # ()
+[//]: # (This project contains an application which can be used to:)
+
+[//]: # (- Create a new bank account with an initial deposit for a customer.)
+
+[//]: # (  - A single customer may have multiple accounts.)
+
+[//]: # (- Transfer amounts between two accounts, including those owned by different customers.)
+
+[//]: # (- Retrieve balance for a given account.)
+
+[//]: # (- Retrieve transaction history for a given account.)
+
+[//]: # (## Technologies Used)
+
+[//]: # (- Java 11)
+
+[//]: # (- [SpringBoot]&#40;https://start.spring.io/&#41;: Used to create easy stand-alone, production-grade Spring based Applications.)
+
+[//]: # (- [H2 database engine]&#40;https://www.h2database.com/html/main.html&#41;: Embedded relational database)
+
+[//]: # (- [Maven]&#40;https://maven.apache.org/&#41;: Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model &#40;POM&#41;, Maven can manage a project's build, reporting and documentation from a central piece of information.)
+
+[//]: # (- [Swagger]&#40;https://swagger.io/&#41;: Swagger is an Interface Description Language for describing RESTful APIs expressed using JSON. Swagger is used together with a set of open-source software tools to design, build, document, and use RESTful web services. Swagger includes automated documentation, code generation, and test-case generation.)
+
+[//]: # (- [Git Actions]&#40;https://docs.github.com/en/actions&#41;: GitHub Actions helps automate tasks within the software development life cycle. GitHub Actions are event-driven, meaning that you can run a series of commands after a specified event has occurred. They happen directly on the Github repo itself.)
 
 ## Swagger
 Following are the available endpoints
@@ -119,20 +139,3 @@ To run the application, please execute
 
 ## API Documentation
 In order to read the API documentation in Swagger, please first start the application and the visit [API Documentation in Swagger](http://localhost:8080/swagger-ui/)
-
-
-## Github Actions
-To ensure the correctness of the code committed, github action for 'building the java project using Maven' is used. This ensures that all tests are green and the projects runs correctly on Windows, MacOS and Linux systems.
-
-## Contribution
-
-Feature requests, issues, pull requests and questions are welcome.
-
-## Contact Information
-
-How to reach me? At [github specific gmail account](mailto:syedumerahmedcode@gmail.com?subject=[GitHub]%20Hello%20from%20Github). Additionally, you can reach me via [Linkedin](https://www.linkedin.com/in/syed-umer-ahmed-a346a746/) or at [Xing](https://www.xing.com/profile/SyedUmer_Ahmed/cv)
-
-Original idea for this project came from [Joao Carlos Sousa do Vale](https://github.com/jcarlosvale)
-
-
-
