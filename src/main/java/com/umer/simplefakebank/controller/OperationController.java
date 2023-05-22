@@ -23,7 +23,6 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 import org.springframework.http.MediaType;
-import lombok.RequiredArgsConstructor;
 
 
 import lombok.extern.log4j.Log4j2;
@@ -38,14 +37,15 @@ import lombok.extern.log4j.Log4j2;
  */
 
 @RestController
-@RequiredArgsConstructor
 @Log4j2
-public class OperationController {
+public class OperationController extends BaseOperationController{
 
 	public static final String OPERATION_END_POINT_V1 = "/v1/operations";
 	public static final String OPERATION_GET_END_POINT = "/fromAccount/{accountId}";
 
-	private final OperationService operationService;
+	public OperationController(OperationService operationService) {
+		super(operationService);
+	}
 
 	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping(path = OPERATION_GET_END_POINT, produces = MediaType.APPLICATION_JSON_VALUE)

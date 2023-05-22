@@ -18,10 +18,8 @@ import com.umer.simplefakebank.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import lombok.RequiredArgsConstructor;
 
 import org.springframework.http.HttpStatus;
-//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import com.umer.simplefakebank.repsitory.UserRepository;
@@ -29,15 +27,13 @@ import com.umer.simplefakebank.entities.User;
 import com.umer.simplefakebank.service.mapper.BankMapper;
 
 @RestController
-@RequiredArgsConstructor
 @RequestMapping("/api/auth")
-public class UserController {
+public class UserController extends BaseUserController {
 
 	public static final String USER_GET_END_POINT_V1 = "/v1/user/{id}";
-//	private final PasswordEncoder passwordEncoder;
-
-	private final UserService userService;
-	private final UserRepository userRepository;
+	public UserController(UserService userService, UserRepository userRepository) {
+		super(userService, userRepository);
+	}
 
 	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping(
@@ -106,8 +102,8 @@ public class UserController {
 	@PostMapping("/login")
 	public ResponseEntity<ResponseUserDTO> loginUser(@Valid @RequestBody LoginUserDTO loginUserDTO) {
 		boolean authenticated = userService.authenticateUser(loginUserDTO.getEmail(), loginUserDTO.getPassword());
-		User user = userRepository.findByEmail(loginUserDTO.getEmail());
 		if (authenticated) {
+			User user = userRepository.findByEmail(loginUserDTO.getEmail());
 			ResponseUserDTO responseUserDTO = BankMapper.toResponseUserDTO(user);
 			return ResponseEntity.ok(responseUserDTO);
 		} else {

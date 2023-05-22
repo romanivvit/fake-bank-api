@@ -26,9 +26,9 @@ public class SwaggerConfiguration {
 	private static final String API_TITLE = "Simple Fake Bank API";
 	private static final String APPLICATION_JSON = "application/json";
 
-	private static final String CONTACT_EMAIL = "syedumerahmedcode@gmail.com";
-	private static final String CONTACT_URL = "https://www.linkedin.com/in/syed-umer-ahmed-a346a746/";
-	private static final String CONTACT_NAME = "Syed Umer Ahmed";
+	private static final String CONTACT_EMAIL = "romanivvit@gmail.com";
+	private static final String CONTACT_URL = "https://www.linkedin.com/in/vitalii-romaniv-7aa968106/";
+	private static final String CONTACT_NAME = "Romaniv Vitalii";
 
 	public static final Contact DEFAULT_CONTACT = new Contact(
 			SwaggerConfiguration.CONTACT_NAME,

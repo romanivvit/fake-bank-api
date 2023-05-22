@@ -1,12 +1,5 @@
 package com.umer.simplefakebank.service;
 
-import static com.umer.simplefakebank.service.mapper.BankMapper.toUserEntity;
-import static com.umer.simplefakebank.service.ServiceUtil.throwsOnCondition;
-//import org.springframework.security.crypto.password.PasswordEncoder;
-
-
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -30,7 +23,6 @@ import lombok.extern.log4j.Log4j2;
 public class UserService {
 
 	private final UserRepository userRepository;
-//	private final PasswordEncoder passwordEncoder;
 
 	public ResponseUserDTO createNewUser(@Valid CreateUserDTO createUserDTO) {
 		log.debug("Creating a new User - {}", createUserDTO);

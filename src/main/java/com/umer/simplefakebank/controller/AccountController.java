@@ -2,6 +2,7 @@ package com.umer.simplefakebank.controller;
 
 import java.net.URI;
 import javax.validation.Valid;
+
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,6 @@ import com.umer.simplefakebank.service.AccountService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import lombok.RequiredArgsConstructor;
 
 /**
  * Account Controller exposing 2 methods: - GET For the givem account Id, it
@@ -29,13 +29,14 @@ import lombok.RequiredArgsConstructor;
  *
  */
 @RestController
-@RequiredArgsConstructor
-public class AccountController {
+public class AccountController extends BaseAccountController {
 
 	public static final String ACCOUNT_END_POINT_V1 = "/v1/accounts";
 	public static final String ACCOUNT_GET_END_POINT_V1 = ACCOUNT_END_POINT_V1 + "/{id}";
 
-	private final AccountService accountService;
+	public AccountController(AccountService accountService) {
+		super(accountService);
+	}
 
 	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping(
